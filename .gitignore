@@ -1,0 +1,7 @@
+/.project
+/tool-image/docker
+/tool-image/go
+/tool-image/docker-19.03.4.tgz
+/tool-image/go1.13.5.linux-amd64.tar.gz
+/tool-image/docker-19.03.5.tgz
+/tool-image/Dockerfile-ubuntu-mysqlcli

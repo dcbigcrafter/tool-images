@@ -1,0 +1,12 @@
+go
+docker
+wget
+git
+vim
+make
+openssh-clients
+gcc
+g++
+mysql-client
+netstat
+nslookup
