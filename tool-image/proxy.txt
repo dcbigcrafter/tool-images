@@ -1,3 +1,2 @@
-#use "export `cat proxy.txt`" to enable proxy
 http_proxy=http://172.16.0.4:8118
 https_proxy=http://172.16.0.4:8118
