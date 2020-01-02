@@ -17,18 +17,20 @@ docker_dir_name="docker"
 
 #ensure golang package has been downloaded
 if [ ! -f "$go_package_name" ]; then
-  wget $go_download_link
+	wget $go_download_link
 fi
-if [ ! -d "$go_dir_name" ]; then
-  tar zxf $go_package_name
-fi
+rm -rf $go_dir_name
+tar zxvf $go_package_name
+#清理go包里无用的文件
+cd $go_dir_name
+rm -rf test doc
+cd ..
 
 if [ ! -f "$docker_package_name" ]; then
-  wget $docker_download_link
+	wget $docker_download_link
 fi
-if [ ! -d "$docker_dir_name" ]; then
-  tar zxf $docker_package_name
-fi
+rm -rf $docker_dir_name
+tar zxvf $docker_package_name
 
 #copy files to context
 rm -rf context
