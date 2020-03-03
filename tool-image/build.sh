@@ -2,7 +2,7 @@
 
 set -e
 
-go_version="1.13.5"
+go_version="1.14"
 docker_version="19.03.5"
 #download link https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
 go_download_link="https://dl.google.com/go/go$go_version.linux-amd64.tar.gz"
@@ -35,11 +35,12 @@ tar zxvf $docker_package_name
 #copy files to context
 rm -rf context
 mkdir context
-cp proxy.txt context/
+#cp proxy.txt context/
+cp -r toolbox context/
 cp Dockerfile context/
 cp -r $go_dir_name context/
 cp -r $docker_dir_name/docker context/
 
 #build image
 docker build -t tool-image-amd64:`cat Version` context
-rm -rf context
+rm -rf context $go_dir_name $docker_dir_name

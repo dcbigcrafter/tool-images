@@ -1,0 +1,4 @@
+GOPROXY=https://goproxy.cn
+GOPROXY=https://goproxy.io
+
+unset GOPROXY
